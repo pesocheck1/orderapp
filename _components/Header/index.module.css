@@ -1,0 +1,119 @@
+/* === ОСНОВНЫЕ === */
+
+@font-face {
+  font-family: glacialbold;
+  src: url(glb.otf);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #f8bbd0, #f20d51);
+  box-shadow: 0 4px 8px rgba(244, 143, 177, 0.3);
+  position: relative;
+  z-index: 100;
+  height: 60px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.berryIcon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  font-family: glacialbold;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.navOpen {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #f20d52d4;
+  padding: 2rem;
+  z-index: 101;
+  gap: 1.5rem;
+}
+
+/* === ССЫЛКИ === */
+.navLink {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+}
+
+.navLink::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* === МОБИЛЬНАЯ ВЕРСИЯ === */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 0.5rem;
+  }
+  .title {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    margin-top: 2rem;
+    display: none;
+  }
+}

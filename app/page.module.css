@@ -1,0 +1,318 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.menuList {
+  flex: 2.5;
+  padding: 1rem;
+}
+
+.cart {
+  flex: 1.5;
+  padding: 0;
+  margin-top: 1.2rem;
+}
+
+.title {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 20px 0 40px 0;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin-bottom: 1.5rem;
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.menuImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cardContent {
+  flex: 1;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.name {
+  margin: 0;
+  font-weight: 700;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.comment {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.addButton {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f20d51;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #f8bbd0;
+}
+
+/* 注文状況 (Cart) */
+
+.cartTitle {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #000000;
+}
+
+.empty {
+  color: #6b7280;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cartImage {
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.cartNamePrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+.cartTopRow {
+  flex: 1;
+}
+
+.priceQtyLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cartName {
+  font-weight: 600;
+  color: #333;
+}
+
+.cartPrice {
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+}
+
+.quantityBlock {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.removeButton {
+  background: transparent;
+  border: none;
+  color: #302f2f;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0.2rem;
+  transition: color 0.2s ease;
+}
+
+.checkoutButton {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  background-color: #f20d51;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background-color: #f8bbd0;
+}
+
+.priceAndButton {
+  display: flex;
+  align-items: baseline;
+  gap: 12px; /* отступ между ценой и кнопкой */
+  margin-top: 0.5rem; /* если нужно отступ сверху */
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.quantity {
+  color: #f20d51;
+}
+
+.totalSum {
+  font-weight: bold;
+  text-align: center;
+  font-size: large;
+  margin-top: 2rem; /* чтобы было чуть отступа сверху */
+}
+
+.totalWithTax {
+  font-weight: bold;
+  text-align: center;
+  font-size: large;
+  margin-top: 1rem;
+}
+
+.quantityBlock {
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.qtyButton {
+  color: #000;
+  font-weight: bold;
+  background: none;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.qtyButton:hover {
+  color: #f20d51;
+}
+
+.quantityText {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .priceAndButton {
+    flex-wrap: nowrap; /* ❗️убираем перенос */
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+
+  .addButton {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .cardWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cardContent {
+    align-items: center;
+  }
+
+  .checkoutButton {
+    white-space: nowrap;
+  }
+  .cartItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .cartNamePrice {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .priceQtyLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cartTopRow {
+    width: 100%;
+  }
+
+  .cartPrice,
+  .qtyButton,
+  .quantityText {
+    font-size: 0.9rem;
+  }
+
+  .cartName {
+    font-weight: bold;
+  }
+
+  .cartPrice {
+    font-size: 0.9rem;
+  }
+
+  .qtyButton {
+    font-size: 0.9rem;
+    padding: 2px 6px;
+  }
+
+  .quantityText {
+    font-size: 0.9rem;
+  }
+}
